@@ -1,5 +1,30 @@
-section {
+.container {
     display: flex;
+}
+section {
+    border: none;
+    border-radius: 5px;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 25%;
+    margin: 10px; 
+    height: auto;
 }
 
+section .section1 {
+    background-color: rgb(231, 231, 231);
+}
+section img {
+    text-align: center;
+    width: 150px;
+    height: 150px
+}
+
+.rating {
+    float: right;
+}
+
+section .section2 .title .price {
+    font-size: 18px;
+    font-weight: bold;
+}

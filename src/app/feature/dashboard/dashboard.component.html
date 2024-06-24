@@ -1,0 +1,10 @@
+<p>child Dashboard works!</p>
+ <div *ngFor="let log of logss | keyvalue">
+{{log.key}} {{log.value}}
+ </div>
+
+ <div *ngFor="let log of log1 | keyvalue">
+    {{log.key}} {{log.value}}
+     </div>
+
+<button (click)="sendDataToParent()">Send it</button>

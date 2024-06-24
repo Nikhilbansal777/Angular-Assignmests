@@ -1,10 +1,20 @@
-<section>
-    <img src="" alt="">
-  <div class="title">
-    <span>Title</span>
-    <span>Pricing</span>
-  </div>
-  <div class="rating">
-    5
+<!-- <div class="product">
+  <p> <span>FOUND: </span> {{productsList.length}} Products</p>
 </div>
-</section>
+<div class="container">
+  <section *ngFor="let product of productsList">
+    <div class="section1">
+      <img src={{product.images[0]}} alt="">
+    </div>
+    <div class="section2">
+      <div class="title">
+        <p>{{product.title}}</p>
+        <p class="price">{{product.price|currency}}</p>
+      </div>
+      <div class="rating">
+        {{product.rating}} ratings
+    </div>
+    </div>
+  </section>
+</div> -->
+<router-outlet></router-outlet>
