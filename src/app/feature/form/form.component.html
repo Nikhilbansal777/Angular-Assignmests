@@ -1,0 +1,18 @@
+<!-- <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="fields" *ngFor="let field of fields">
+        <label>{{field.label}}</label>
+        <input type="text" [(ngModel)]="field.value"  [placeholder]="field.label" [name]="field.key">
+    </div>
+    <button type="submit">Submit</button>
+</form> -->
+
+<form #loginForm="ngForm" (ngSubmit)="submit()">
+    <div class="fields">
+        <input type="text" [(ngModel)] ="username" name="username">
+    </div>
+    <div class="fields">
+        <input type="text" [(ngModel)] ="password" name="password">
+    </div>
+    <button [disabled]="buttonDisable()"> submit</button>
+</form>
+<h1 *ngIf="flagToCheckIfLoggedIn">Yes logged in hai bhai</h1>

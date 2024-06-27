@@ -1,5 +1,5 @@
 <p>child Dashboard works!</p>
- <div *ngFor="let log of logss | keyvalue">
+ <!-- <div *ngFor="let log of logss | keyvalue">
 {{log.key}} {{log.value}}
  </div>
 
@@ -7,4 +7,10 @@
     {{log.key}} {{log.value}}
      </div>
 
-<button (click)="sendDataToParent()">Send it</button>
+<button (click)="sendDataToParent()">Send it</button> -->
+
+<app-form (sendDataToParent)="recieveFormData($event)" [flag]="isLoggedinFlag"></app-form>
+<p> {{loginData['username']}}</p>
+<p> {{loginData['password']}}</p>
+
+<button (click)="isLoggedin()">is Login</button>
