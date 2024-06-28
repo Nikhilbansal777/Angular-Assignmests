@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
   @Output('sendDataToParent') loginInfo = new EventEmitter<{ username: string, password: string; }>();
   @Input("flag") flagToCheckIfLoggedIn!: boolean;
   username: string = "";
@@ -18,14 +18,10 @@ export class FormComponent implements OnInit {
     { label: "Role", key: 'role', value: "" },
     { label: "Status", key: 'status', value: "" },
   ];
-  ngOnInit(): void {
-
-  }
 
   onSubmit() {
     let fields = this.fields.filter(field => field.value).map((field) => ({ [field.key]: field.value }));
     console.log(fields);
-
   }
 
   buttonDisable() {
@@ -33,7 +29,6 @@ export class FormComponent implements OnInit {
       return true;
     } 
       return false;
-
   }
 
   submit() {
@@ -46,15 +41,10 @@ export class FormComponent implements OnInit {
         return this.password;
       }
     };
-
-    // Create a new object and set its prototype to baseObj
-
-    // let baseObj = {}
     let obj = Object.create(baseObj);
     obj.username = this.username
     obj.password = this.password
     console.log(obj);
-
     this.loginInfo.emit(obj)
   }
 }

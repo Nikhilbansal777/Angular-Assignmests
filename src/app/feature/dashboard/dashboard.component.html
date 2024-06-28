@@ -9,7 +9,22 @@
 
 <button (click)="sendDataToParent()">Send it</button> -->
 
-<app-form (sendDataToParent)="recieveFormData($event)" [flag]="isLoggedinFlag"></app-form>
+<app-form (sendDataToParent)="recieveFormData($event)" [flag]="isLoggedinFlag">
+   <div ngProjectAs="contactForm" class="title">
+      <h1> Hi There welcome</h1>
+      <form #contactForm="ngForm" >
+         <div class="fields">
+            <label>Contact</label>
+            <input type="text" placeholder="contact number">
+         </div>
+         <div class="fields">
+            <label>Email</label>
+            <input type="text" placeholder="Email">
+         </div>
+         <button>Submit</button>
+      </form>
+</div>
+</app-form>
 <p> {{loginData['username']}}</p>
 <p> {{loginData['password']}}</p>
 

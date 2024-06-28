@@ -5,6 +5,7 @@
     </div>
     <button type="submit">Submit</button>
 </form> -->
+<ng-content select="contactForm"></ng-content>
 
 <form #loginForm="ngForm" (ngSubmit)="submit()">
     <div class="fields">
@@ -16,3 +17,5 @@
     <button [disabled]="buttonDisable()"> submit</button>
 </form>
 <h1 *ngIf="flagToCheckIfLoggedIn">Yes logged in hai bhai</h1>
+
+<ng-content></ng-content>
