@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BaseComponent } from './base/base.component';
-import { FormComponent } from './form/form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:"", component: DashboardComponent}
+  { path: "", component: DashboardComponent },
+  { path: "routing", loadChildren: () => import("../feature/routing-examples/routing-examples.module").then((m) => m.RoutingExamplesModule) }
 ];
 
 @NgModule({

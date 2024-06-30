@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts();
+    localStorage.setItem("token", "nikhil");
   }
 
   public getProducts() {
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit {
     ).subscribe((res) => {
       console.log(res);
       this.productsList = res.products;
-      console.log(this.productsList)
+      console.log(this.productsList);
     });
   }
 }
