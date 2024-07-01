@@ -1,2 +1,7 @@
 <p>homepage works!</p>
 <button (click)="sendRouteParams()" > Route Params </button>
+<br>
+<a [routerLink]="['../home/child']">Move to Child 2</a>
+<br>
+<a [routerLink]="['../home']">Move to Child 1</a>
+<router-outlet></router-outlet>

@@ -14,6 +14,6 @@ export class HomepageComponent {
   }
 
   sendRouteParams() {
-    this.router.navigate(['/routing/params/3'])
+    this.router.navigate(['/routing/params'], {queryParams: {flag: true, routing:true, value: "values"}})
   }
 }
