@@ -17,7 +17,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FeatureRoutingModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class FeatureModule { }

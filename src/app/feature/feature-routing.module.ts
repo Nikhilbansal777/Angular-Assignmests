@@ -4,7 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: "", component: DashboardComponent },
-  { path: "routing", loadChildren: () => import("../feature/routing-examples/routing-examples.module").then((m) => m.RoutingExamplesModule) }
+  { path: "routing", loadChildren: () => import("../feature/routing-examples/routing-examples.module").then((m) => m.RoutingExamplesModule) },
+  { path: "dynamic", loadChildren: () => import("../feature/dynamic-comp/dynamic-comp.module").then((m) => m.DynamicCompModule) }
 ];
 
 @NgModule({
