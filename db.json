@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "username": "asdffffffffsdfasd",
+      "email": "sfaf@sv.com",
+      "password": "afdfa",
+      "confirmPassword": "fsd",
+      "gender": "Male",
+      "id": "1"
+    },
+    {
+      "id": "d66d",
+      "username": "qwer",
+      "email": "fsda@gmail.com",
+      "password": "fsda",
+      "confirmPassword": "fsdaf",
+      "gender": "Male"
+    },
+    {
+      "id": "a5fb",
+      "username": "fasd",
+      "email": "fdsd@gmail.ccom",
+      "password": "fdasd",
+      "confirmPassword": "wefsd",
+      "gender": "Male"
+    },
+    {
+      "id": "7a23",
+      "username": "asdf",
+      "email": "sfaf@sv.com",
+      "password": "afdfa",
+      "confirmPassword": "fsd",
+      "gender": "Male"
+    },
+    {
+      "id": "d81c",
+      "username": "asdf",
+      "email": "sfaf@sv.com",
+      "password": "afdfa",
+      "confirmPassword": "fsd",
+      "gender": "Male"
+    },
+    {
+      "id": "9d92",
+      "username": "asdf",
+      "email": "sfaf@sv.com",
+      "password": "afdfa",
+      "confirmPassword": "fsd",
+      "gender": "Male"
+    },
+    {
+      "id": "f196",
+      "username": "asdf",
+      "email": "sfaf@sv.com",
+      "password": "afdfa",
+      "confirmPassword": "fsd",
+      "gender": "Male"
+    },
+    {
+      "id": "ad66",
+      "username": "asdf",
+      "email": "sfaf@sv.com",
+      "password": "afdfa",
+      "confirmPassword": "fsd",
+      "gender": "Male"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "Hello World",
+      "content": "This is the first post."
+    },
+    {
+      "id": "2",
+      "title": "Another Post",
+      "content": "This is another post."
+    }
+  ]
+}
