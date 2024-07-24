@@ -19,3 +19,14 @@
 </div> -->
 
 <router-outlet></router-outlet>
+
+<input type="text" #searchText>
+
+<button (click)="search(searchText)">Search</button>
+<span [innerHTML]="searchKey"></span>
+
+<!-- <h1 i18n="@@welcomeMessage">Welcome to our application!</h1> -->
+<h1 i18n="@@welcomeMessage">Welcome to our application!</h1>
+<h1 i18n="@@new">new</h1>
+
+{{titlfe + 12+ "123"}}

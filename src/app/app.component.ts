@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { catchError, throwError } from 'rxjs';
 import { ProductService } from './product.service';
 
@@ -8,9 +9,13 @@ import { ProductService } from './product.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
   title = 'productList';
+  searchKey: any;
   productsList: any = [];
-  constructor(private productService: ProductService) { }
+  flag = false;
+  titlfe = 123;
+  constructor(private productService: ProductService, private sanitiser: DomSanitizer) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -23,9 +28,12 @@ export class AppComponent implements OnInit {
         return throwError(() => err);
       })
     ).subscribe((res) => {
-      console.log(res);
+      // console.log(res);
       this.productsList = res.products;
-      console.log(this.productsList);
+      // console.log(this.productsList);
     });
+  }
+  search(searchtxt: any) {
+    this.searchKey = this.sanitiser.bypassSecurityTrustHtml(searchtxt);
   }
 }

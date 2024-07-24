@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild, ViewContainerRef } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { catchError, throwError } from 'rxjs';
 import { ProductService } from 'src/app/product.service';
@@ -10,15 +10,18 @@ import { DyanmicNotificationComponent } from './dyanmic-notification/dyanmic-not
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, OnChanges {
 
+  arr = [1,23,4,5,3,1,3,6,73,45,73,3]
   @Input('logs') logss: any;
   @Input() log1: any;
   isLoggedinFlag = false;
   loginData: { username: string, password: string; } = { username: "", password: "" };
   @Output('customEvent') events = new EventEmitter<any>();
   images: any = [];
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {
+    console.log("constructor");
+   }
 
   @ViewChild('container', { read: ViewContainerRef, static: true }) container!: ViewContainerRef;;
 
@@ -34,19 +37,25 @@ export class DashboardComponent implements OnInit {
     gender: new FormControl("", [Validators.required]),
   });
 
+  ngOnChanges(changes: SimpleChanges): void {
+      // console.log(changes, "ngOnchanges")
+  }
+
   ngOnInit(): void {
+    // console.log('oninit');
+    
     this.getDogsData();
     this.getUsers();
   }
   isEdit = false;
   userInfo: Array<user> = [];
   getUsers() {
-    this.productService.getUser().pipe(catchError(err => {
-      return throwError(() => err);
-    })).subscribe((res: user[]) => {
-      this.userInfo = res;
-      this.loader = true;
-    });
+    // this.productService.getUser().pipe(catchError(err => {
+    //   return throwError(() => err);
+    // })).subscribe((res: user[]) => {
+    //   this.userInfo = res;
+    //   this.loader = true;
+    // });
   }
 
   addEditUser() {
@@ -132,7 +141,7 @@ export class DashboardComponent implements OnInit {
   }
 
   recieveFormData(loginInfo: { username: string, password: string; }) {
-    console.log(loginInfo);
+    // console.log(loginInfo);
     this.loginData = loginInfo;
   }
 

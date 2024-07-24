@@ -1,0 +1,13 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="welcomeMessage" datatype="html">
+        <source>Welcome to our application!</source>
+        <target>Bienvenue dans notre application!</target>
+      </trans-unit>
+          <trans-unit id="new" datatype="html">
+        <target>fds</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
